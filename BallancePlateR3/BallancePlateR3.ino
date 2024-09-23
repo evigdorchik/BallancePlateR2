@@ -4,6 +4,8 @@
 
 // Adafruit_TSC2007 touch; //Touch sensor TSC2007
 
+TSC2007 touch;
+
 Servo X; //KST X12-508
 int xNeutral = 1510; //Value to keep plate level in X
 int xMax = 1000;
@@ -52,6 +54,7 @@ bool place = true; //used to change the place on hop
 int CT = 0;
 
 void setup() {
+  Wire.begin();
   X.attach(5); // X axis servo, pin 5
   Y.attach(6); // Y axis servo, pin 6
   Serial.begin(115200);

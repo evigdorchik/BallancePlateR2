@@ -5,7 +5,7 @@
 #include <Wire.h>
 #include <Servo.h>
 
-#define DEV_ADDR  = 0x48;
+#define DEV_ADDR 0x48
 
 typedef enum {
    MEASURE_TEMP0 = 0,
@@ -44,8 +44,8 @@ class TSC2007 {
       // byte ActivateYX_drivers();
       uint16_t command(tsc2007_function func, tsc2007_power pwr,
                         tsc2007_resolution res);
-      byte MeasureX();
-      byte MeasureY();
+      // byte MeasureX();
+      // byte MeasureY();
       // byte MeasureZ1();
       // byte MeasureZ2();
       // byte ping();
@@ -54,3 +54,5 @@ class TSC2007 {
       // void initCall(byte reg);
       // void endCall();
 };
+
+#endif
